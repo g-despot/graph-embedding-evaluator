@@ -85,7 +85,7 @@ class Node2Vec():
                               seed=self.seed,
                               workers=self.workers,
                               iter=self.iter)
-        
+
         return self.model
 
     def get_embedding(self) -> list:

@@ -14,7 +14,7 @@ def load_graph(is_weighted: bool, is_directed: bool, file_path: str) -> nx.class
         file_path (str): Path to the file with the input graph.
 
     Returns:
-        A NetworkX graph object.
+        G (networkx.classes.graph.Graph): A NetworkX graph object.
     """
 
     if is_weighted:

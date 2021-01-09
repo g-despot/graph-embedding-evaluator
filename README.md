@@ -1,4 +1,4 @@
-# Grah Embedding Evaluator **(DRAFT VERSION)**
+# Graph Embedding Evaluator **(DRAFT VERSION)**
 
 This app implements custom **Node2Vec** and **DeepWalk** algorithms which are evaluated on a link prediction problem. 
 After the embeddings are generated, a classifier is used for link prediction between two nodes. Model selection is 
@@ -15,7 +15,7 @@ To evaluate other graph embedding implementations, you first need to place them 
 and some need to be installed:
 * [node2vec_snap](https://github.com/aditya-grover/node2vec): Clone it to the `src/algorithms/node2vec` directory.
 * [node2vec_eliorc](https://github.com/eliorc/node2vec): Install it with `pip install node2vec`.
-* [node2vec_deepwalk](https://github.com/phanein/deepwalk): Clone it to the `src/algorithms/deepwalk` directry. Follow the [README.rst](https://github.com/phanein/deepwalk#installation) file installation instructions.
+* [node2vec_deepwalk](https://github.com/phanein/deepwalk): Clone it to the `src/algorithms/deepwalk` directory. Follow the [README.rst](https://github.com/phanein/deepwalk#installation) file installation instructions.
 
 You can also install the requirements for this project by running `pip install -r requirements.txt`.
 

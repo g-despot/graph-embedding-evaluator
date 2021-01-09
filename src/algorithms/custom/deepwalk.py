@@ -34,14 +34,14 @@ class DeepWalk():
         self.iter = iter
         self.seed = seed
 
-    def fit(self, G: nx.classes.graph.Graph):
+    def fit(self, G: nx.classes.graph.Graph) -> Word2Vec:
         """Fit and get the embedding algorithm model.
 
         Args:
             G (networkx.classes.graph.Graph): A NetworkX graph object.
 
         Returns:
-            The Word2Vec model.
+            self.model (gensim.models.word2vec.Word2Vec): The Word2Vec model.
         """
 
         self.G = G
