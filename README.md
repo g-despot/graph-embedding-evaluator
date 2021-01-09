@@ -11,22 +11,25 @@ An overview of the evaluator steps:
 
 ## Prerequisites
 
-To evaluate other graph embedding implementations, you first need to place them in the `src/algorithms/` directory 
-and some need to be installed:
-* [node2vec_snap](https://github.com/aditya-grover/node2vec): Clone it to the `src/algorithms/node2vec` directory.
-* [node2vec_eliorc](https://github.com/eliorc/node2vec): Install it with `pip install node2vec`.
-* [node2vec_deepwalk](https://github.com/phanein/deepwalk): Clone it to the `src/algorithms/deepwalk` directory. Follow the [README.rst](https://github.com/phanein/deepwalk#installation) file installation instructions.
+You need to install the requirements for this project by running `pip install -r requirements.txt` from the root directory.
 
-You can also install the requirements for this project by running `pip install -r requirements.txt`.
+To evaluate other graph embedding implementations, you need to place them in the `src/algorithms/` directory.
+* [node2vec_snap](https://github.com/aditya-grover/node2vec): Clone it to the `src/algorithms/node2vec` directory.
+* [node2vec_deepwalk](https://github.com/phanein/deepwalk): Clone it to the `src/algorithms/deepwalk` directory and follow the [README.rst](https://github.com/phanein/deepwalk#installation) file installation instructions.
+
+Some algorithms don't need to be added via source code, only installed:
+* [node2vec_eliorc](https://github.com/eliorc/node2vec): Install it with `pip install node2vec`.
+
+At this time, only these algorithms are supported for evaluation (including the Node2Vec and DeepWalk custom implementations).
 
 ## How to run the program
 
-To run a specific embedding algorithm with defined parameters:
+To run a specific embedding algorithm with defined arguments:
 ```bash
 python main.py --input facebook_pages.edgelist --output facebook_pages.txt --results facebook_pages.json --method deepwalk_custom --classifier logisticalregression
 ```
 
-To run all multiple embedding algorithms with defined parameters:
+To start multiple embedding algorithms in a row with defined arguments edit and run the `start_evaluations.py` file:
 ```bash
 python start_evaluations.py
 ```
@@ -54,7 +57,7 @@ python start_evaluations.py
 
 ## Generate the documentation
 
-You can generate the documentation for this project by running `make html` in the `/docs` directory. Just make sure that you have the theme **sphinx-rtd-theme**  installed by running:
+You can generate the documentation for this project by running `make html` in the `/docs` directory. Make sure that you have the theme **sphinx-rtd-theme**  installed by running:
 
 ```bash
 pip install sphinx_rtd_theme
@@ -66,10 +69,14 @@ pip install sphinx_rtd_theme
 
 ## Evaluation results
 
+By running the `start_evaluations.py` script, you will get the following evaluation results in the `/results` directory.
+
+Evaluation results table:
 <p align="left">
   <img width="600" src="./docs/images/evaluation_results_table.png" alt="Evaluation results table">
 </p>
 
+Evaluation results visual:
 <p align="left">
   <img width="600" src="./docs/images/evaluation_results_visual.png" alt="Evaluation results visual">
 </p>
