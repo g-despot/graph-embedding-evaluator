@@ -51,3 +51,25 @@ python start_evaluations.py
 * `--iter`: Number of iterations (epochs) over the corpus. Default: 1
 * `--method`: The graph embedding algorithm and specific implementation. Choices: `node2vec_snap`, `node2vec_eliorc`, `node2vec_custom`, `deepwalk_phanein` and `deepwalk_custom`. **Argument required.**
 * `--classifier`: The classifier for link prediction evaluation. Choices: `logisticalregression`, `randomforest` and `gradientboost`. **Argument required.**
+
+## Generate the documentation
+
+You can generate the documentation for this project by running `make html` in the `/docs` directory. Just make sure that you have the theme **sphinx-rtd-theme**  installed by running:
+
+```bash
+pip install sphinx_rtd_theme
+```
+
+<p align="left">
+  <img width="500" src="./docs/images/docs.png" alt="Documentation example">
+</p>
+
+## Evaluation results
+
+<p align="left">
+  <img width="600" src="./docs/images/evaluation_results_table.png" alt="Evaluation results table">
+</p>
+
+<p align="left">
+  <img width="600" src="./docs/images/evaluation_results_visual.png" alt="Evaluation results visual">
+</p>
